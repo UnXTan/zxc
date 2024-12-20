@@ -26,6 +26,12 @@ class Program
             }
             else if (choice == "2")
             {
+                if (tasks.Count == 0)
+                {
+                    Console.WriteLine("No tasks to delete!");
+                    continue;
+                }
+
                 Console.WriteLine("Tasks:");
                 for (int i = 0; i < tasks.Count; i++)
                 {
