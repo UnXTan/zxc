@@ -12,7 +12,8 @@ class Program
         {
             Console.WriteLine("\n1. Add Task");
             Console.WriteLine("2. Delete Task");
-            Console.WriteLine("3. Exit");
+            Console.WriteLine("3. View Tasks");
+            Console.WriteLine("4. Exit");
             Console.Write("Choose an option: ");
             string choice = Console.ReadLine();
 
@@ -49,6 +50,21 @@ class Program
                 }
             }
             else if (choice == "3")
+            {
+                Console.WriteLine("Tasks:");
+                if (tasks.Count == 0)
+                {
+                    Console.WriteLine("No tasks available.");
+                }
+                else
+                {
+                    for (int i = 0; i < tasks.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. {tasks[i]}");
+                    }
+                }
+            }
+            else if (choice == "4")
             {
                 break;
             }
